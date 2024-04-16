@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <title>记事本</title>
   </head>
   <body>
@@ -28,12 +28,14 @@
           </li>
         </ul>
       </section>
-      <!-- 统计和清空 -->
-      <footer class="footer">
+      <!-- 统计和清空 → 如果没有任务了，底部隐藏掉 → v-show -->
+      <footer class="footer" v-show="list.length > 0">
         <!-- 统计 -->
-        <span class="todo-count">合 计:<strong> 2 </strong></span>
+        <span class="todo-count"
+          >合 计:<strong> {{ list.length }} </strong></span
+        >
         <!-- 清空 -->
-        <button class="clear-completed">清空任务</button>
+        <button @click="clear" class="clear-completed">清空任务</button>
       </footer>
     </section>
 
@@ -49,6 +51,7 @@
           todoName: "",
           list: [
             { id: 1, name: "跑步一公里" },
+            { id: 2, name: "跳绳200个" },
             { id: 3, name: "游泳100米" },
           ],
         },
@@ -67,6 +70,9 @@
               name: this.todoName,
             });
             this.todoName = "";
+          },
+          clear() {
+            this.list = [];
           },
         },
       });

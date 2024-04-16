@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <title>记事本</title>
   </head>
   <body>
@@ -19,11 +19,10 @@
       <!-- 列表区域 -->
       <section class="main">
         <ul class="todo-list">
-          <li class="todo" v-for="(item, index) in list" :key="item.id">
+          <li class="todo">
             <div class="view">
-              <span class="index">{{ index + 1 }}.</span>
-              <label>{{ item.name }}</label>
-              <button @click="del(item.id)" class="destroy"></button>
+              <span class="index">1.</span> <label>吃饭饭</label>
+              <button class="destroy"></button>
             </div>
           </li>
         </ul>
@@ -31,7 +30,7 @@
       <!-- 统计和清空 -->
       <footer class="footer">
         <!-- 统计 -->
-        <span class="todo-count">合 计:<strong> 2 </strong></span>
+        <span class="todo-count">合 计:<strong> 1 </strong></span>
         <!-- 清空 -->
         <button class="clear-completed">清空任务</button>
       </footer>
@@ -42,18 +41,7 @@
     <script>
       const app = new Vue({
         el: "#app",
-        data: {
-          list: [
-            { id: 1, name: "跑步一公里" },
-            { id: 3, name: "游泳100米" },
-          ],
-        },
-        methods: {
-          del(id) {
-            // console.log(id) => filter 保留所有不等于该 id 的项
-            this.list = this.list.filter((item) => item.id !== id);
-          },
-        },
+        data: {},
       });
     </script>
   </body>
