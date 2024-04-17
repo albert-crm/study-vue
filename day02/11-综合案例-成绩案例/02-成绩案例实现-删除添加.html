@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="styles/index.css" />
     <title>Document</title>
   </head>
   <body>
@@ -41,8 +41,8 @@
           <tfoot>
             <tr>
               <td colspan="5">
-                <span>总分：{{ totalScore }}</span>
-                <span style="margin-left: 50px">平均分：{{ averageScore }}</span>
+                <span>总分：246</span>
+                <span style="margin-left: 50px">平均分：79</span>
               </td>
             </tr>
           </tfoot>
@@ -85,22 +85,11 @@
         data: {
           list: [
             { id: 1, subject: '语文', score: 62 },
-            { id: 7, subject: '数学', score: 89 },
+            { id: 7, subject: '数学', score: 39 },
             { id: 12, subject: '英语', score: 70 },
           ],
           subject: '',
           score: ''
-        },
-        computed: {
-          totalScore() {
-            return this.list.reduce((sum, item) => sum + item.score, 0)
-          },
-          averageScore () {
-            if (this.list.length === 0) {
-              return 0
-            }
-            return (this.totalScore / this.list.length).toFixed(2)
-          }
         },
         methods: {
           del (id) {

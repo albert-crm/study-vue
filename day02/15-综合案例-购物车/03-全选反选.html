@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/inputnumber.css" />
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="css/inputnumber.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <title>购物车</title>
   </head>
   <body>
@@ -59,9 +59,9 @@
           </label>
           <div class="right-box">
             <!-- 所有商品总价 -->
-            <span class="price-box">总价&nbsp;&nbsp;:&nbsp;&nbsp;¥&nbsp;<span class="price">{{ totalPrice }}</span></span>
+            <span class="price-box">总价&nbsp;&nbsp;:&nbsp;&nbsp;¥&nbsp;<span class="price">24</span></span>
             <!-- 结算按钮 -->
-            <button class="pay">结算( {{ totalCount }} )</button>
+            <button class="pay">结算( 6 )</button>
           </div>
         </div>
       </div>
@@ -128,30 +128,7 @@
               // 基于拿到的布尔值，要让所有的小选框 同步状态
               this.fruitList.forEach(item => item.isChecked = value)
             }
-          },
-          // 统计选中的总数 reduce
-          totalCount () {
-            return this.fruitList.reduce((sum, item) => {
-              if (item.isChecked) {
-                // 选中 → 需要累加
-                return sum + item.num
-              } else {
-                // 没选中 → 不需要累加
-                return sum
-              }
-            }, 0)
-          },
-          // 总计选中的总价 num * price
-          totalPrice () {
-            return this.fruitList.reduce((sum, item) => {
-              if (item.isChecked) {
-                return sum + item.num * item.price
-              } else {
-                return sum
-              }
-            }, 0)
           }
-
         },
         methods: {
           del (id) {

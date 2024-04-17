@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/inputnumber.css" />
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="css/inputnumber.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <title>购物车</title>
   </head>
   <body>
@@ -40,13 +40,13 @@
               <div class="td">{{ item.price }}</div>
               <div class="td">
                 <div class="my-input-number">
-                  <button class="decrease"> - </button>
+                  <button :disabled="item.num <= 1" class="decrease" @click="sub(item.id)"> - </button>
                   <span class="my-input__inner">{{ item.num }}</span>
-                  <button class="increase"> + </button>
+                  <button class="increase" @click="add(item.id)"> + </button>
                 </div>
               </div>
               <div class="td">{{ item.num * item.price }}</div>
-              <div class="td"><button>删除</button></div>
+              <div class="td"><button @click="del(item.id)">删除</button></div>
             </div>
           </div>
         </div>
@@ -112,6 +112,23 @@
             },
           ],
         },
+        methods: {
+          del (id) {
+            this.fruitList = this.fruitList.filter(item => item.id !== id)
+          },
+          add (id) {
+            // 1. 根据 id 找到数组中的对应项 → find
+            const fruit = this.fruitList.find(item => item.id === id)
+            // 2. 操作 num 数量
+            fruit.num++
+          },
+          sub (id) {
+            // 1. 根据 id 找到数组中的对应项 → find
+            const fruit = this.fruitList.find(item => item.id === id)
+            // 2. 操作 num 数量
+            fruit.num--
+          }
+        }
       })
     </script>
   </body>
