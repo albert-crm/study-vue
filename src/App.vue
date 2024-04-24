@@ -1,22 +1,20 @@
 <template>
   <div class="App">
-
-    <base-one></base-one>
-    <base-two></base-two>
+    <base-count></base-count>
+    <base-count></base-count>
+    <base-count></base-count>
   </div>
 </template>
 
 <script>
-import BaseOne from './components/BaseOne.vue'
-import BaseTwo from './components/BaseTwo.vue'
-
+import BaseCount from './components/BaseCount.vue'
 
 
 export default {
   name: "App",
   components: {
-    BaseOne,
-    BaseTwo
+    BaseCount
+
 
   }
 }
