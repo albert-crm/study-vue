@@ -2,7 +2,8 @@
   <li class="base-goods-item">
     <a href="#">
       <div class="pic">
-        <img src="@/assets/images/goods1.png" alt="" />
+        <img src="@/assets/images/goods1.png"
+             alt="" />
       </div>
       <div class="txt">
         <h4>KN95级莫兰迪色防护口罩</h4>
@@ -20,7 +21,7 @@ export default {}
 .base-goods-item {
   width: 304px;
   height: 404px;
-  background-color: #EEF9F4;
+  background-color: #eef9f4;
 }
 .base-goods-item {
   display: block;
@@ -39,7 +40,7 @@ export default {}
 }
 .base-goods-item p {
   font-size: 18px;
-  color: #AA2113;
+  color: #aa2113;
 }
 .base-goods-item p span {
   font-size: 22px;

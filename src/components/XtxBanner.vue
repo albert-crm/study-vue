@@ -5,10 +5,12 @@
       <!-- 图 -->
       <ul class="pic">
         <li>
-          <a href="#"><img src="@/assets/images/banner1.png" alt="" /></a>
+          <a href="#"><img src="@/assets/images/banner1.png"
+                 alt="" /></a>
         </li>
         <li>
-          <a href="#"><img src="@/assets/images/banner1.png" alt="" /></a>
+          <a href="#"><img src="@/assets/images/banner1.png"
+                 alt="" /></a>
         </li>
       </ul>
       <!-- 侧导航 -->
@@ -38,30 +40,21 @@
           <li>
             <div>
               <span><a href="#">电器</a></span>
-              <span
-                ><a href="#">床品</a><a href="#">四件套</a
-                ><a href="#">被枕</a></span
-              >
+              <span><a href="#">床品</a><a href="#">四件套</a><a href="#">被枕</a></span>
             </div>
             <i class="iconfont icon-arrow-right-bold"></i>
           </li>
           <li>
             <div>
               <span><a href="#">居家</a></span>
-              <span
-                ><a href="#">奶粉</a><a href="#">玩具</a
-                ><a href="#">辅食</a></span
-              >
+              <span><a href="#">奶粉</a><a href="#">玩具</a><a href="#">辅食</a></span>
             </div>
             <i class="iconfont icon-arrow-right-bold"></i>
           </li>
           <li>
             <div>
               <span><a href="#">洗护</a></span>
-              <span
-                ><a href="#">洗发</a><a href="#">洗护</a
-                ><a href="#">美妆</a></span
-              >
+              <span><a href="#">洗发</a><a href="#">洗护</a><a href="#">美妆</a></span>
             </div>
             <i class="iconfont icon-arrow-right-bold"></i>
           </li>
@@ -110,11 +103,10 @@ export default {}
 </script>
 
 <style>
-
 /* 轮播区域 */
 .banner {
   height: 500px;
-  background-color: #F5F5F5 ;
+  background-color: #f5f5f5;
 }
 .banner .wrapper {
   position: relative;
@@ -135,7 +127,7 @@ export default {}
   top: 0;
   width: 250px;
   height: 500px;
-  background-color: rgba(0,0,0,0.42);
+  background-color: rgba(0, 0, 0, 0.42);
 }
 .banner .subnav li {
   display: flex;
@@ -158,7 +150,7 @@ export default {}
   font-size: 14px;
 }
 .banner .subnav li:hover {
-  background-color: #00BE9A;
+  background-color: #00be9a;
 }
 .banner ol {
   position: absolute;
@@ -179,14 +171,13 @@ export default {}
   display: block;
   width: 14px;
   height: 14px;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
 }
 .banner ol .current {
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .banner ol .current i {
   background-color: #fff;
 }
-
 </style>

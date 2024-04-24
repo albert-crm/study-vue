@@ -7,9 +7,8 @@
         <p>新鲜出炉 品质靠谱</p>
       </div>
       <div class="right">
-        <a href="#" class="more"
-          >查看全部<span class="iconfont icon-arrow-right-bold"></span
-        ></a>
+        <a href="#"
+           class="more">查看全部<span class="iconfont icon-arrow-right-bold"></span></a>
       </div>
     </div>
     <div class="bd">

@@ -51,9 +51,7 @@
           <dl>
             <dt>服务热线</dt>
             <dd>
-              <a href="#"
-                >在线客服<span class="iconfont icon-customer-service"></span
-              ></a>
+              <a href="#">在线客服<span class="iconfont icon-customer-service"></span></a>
             </dd>
             <dd><a href="#">客服电话 400-0000-000</a></dd>
             <dd><a href="#">工作时间 周一至周日 8:00-18:00</a></dd>
@@ -62,11 +60,13 @@
         <div class="right">
           <ul>
             <li>
-              <div><img src="@/assets/images/wechat.png" alt="" /></div>
+              <div><img src="@/assets/images/wechat.png"
+                     alt="" /></div>
               <p>微信公众号</p>
             </li>
             <li>
-              <div><img src="@/assets/images/app.png" alt="" /></div>
+              <div><img src="@/assets/images/app.png"
+                     alt="" /></div>
               <p>APP下载二维码</p>
             </li>
           </ul>
@@ -74,11 +74,7 @@
       </div>
       <div class="copyright">
         <p>
-          <a href="#">关于我们</a>|<a href="#">帮助中心</a>|<a href="#"
-            >售后服务</a
-          >|<a href="#">配送与验收</a>|<a href="#">商务合作</a>|<a href="#"
-            >搜索推荐</a
-          >|<a href="#">友情链接</a>
+          <a href="#">关于我们</a>|<a href="#">帮助中心</a>|<a href="#">售后服务</a>|<a href="#">配送与验收</a>|<a href="#">商务合作</a>|<a href="#">搜索推荐</a>|<a href="#">友情链接</a>
         </p>
         <p>CopyRight © 小兔鲜</p>
       </div>

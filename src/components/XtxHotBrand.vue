@@ -14,7 +14,8 @@
       </div>
       <div class="bd">
         <ul>
-          <BaseBrandItem v-for="item in 5" :key="item"></BaseBrandItem>
+          <BaseBrandItem v-for="item in 5"
+                         :key="item"></BaseBrandItem>
         </ul>
       </div>
     </div>
@@ -31,7 +32,7 @@ export default {}
   margin-top: 60px;
   padding-bottom: 40px;
   overflow: hidden;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 .hot .title {
   position: relative;
@@ -54,7 +55,7 @@ export default {}
 }
 .hot .button a:nth-child(2) {
   margin-left: 12px;
-  background-color: #00BE9A;
+  background-color: #00be9a;
 }
 .hot .bd ul {
   display: flex;
