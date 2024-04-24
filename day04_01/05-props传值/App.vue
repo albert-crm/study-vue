@@ -1,20 +1,19 @@
 <template>
-  <div class="App">
-    <UserInfo :username="username"
-              :age="age"
-              :isSingle="isSingle"
-              :car="car"
-              :hobby="hobby"></UserInfo>
+  <div class="app">
+    <UserInfo
+      :username="username"
+      :age="age"
+      :isSingle="isSingle"
+      :car="car"
+      :hobby="hobby"
+    ></UserInfo>
   </div>
 </template>
 
 <script>
 import UserInfo from './components/UserInfo.vue'
-
-
-
 export default {
-  data () {
+  data() {
     return {
       username: '小帅',
       age: 28,
@@ -25,9 +24,9 @@ export default {
       hobby: ['篮球', '足球', '羽毛球'],
     }
   },
-  components: { UserInfo },
-  name: 'App',
-
+  components: {
+    UserInfo,
+  },
 }
 </script>
 
