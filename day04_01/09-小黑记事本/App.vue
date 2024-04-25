@@ -1,19 +1,16 @@
 <template>
   <!-- 主体区域 -->
   <section id="app">
-
-    <todo-header @add="handleAdd"></todo-header>
-    <todo-main :list="list"></todo-main>
-    <todo-footer :list="list"
-                 @clear="clear"></todo-footer>
-
+    <TodoHeader @add="handleAdd"></TodoHeader>
+    <TodoMain :list="list" @del="handelDel"></TodoMain>
+    <TodoFooter :list="list" @clear="clear"></TodoFooter>
   </section>
 </template>
 
 <script>
-import TodoFooter from './components/TodoFooter.vue'
 import TodoHeader from './components/TodoHeader.vue'
 import TodoMain from './components/TodoMain.vue'
+import TodoFooter from './components/TodoFooter.vue'
 
 // 渲染功能：
 // 1.提供数据： 提供在公共的父组件 App.vue
@@ -36,15 +33,8 @@ import TodoMain from './components/TodoMain.vue'
 // 底部合计：父传子  传list 渲染
 // 清空功能：子传父  通知父组件 → 父组件进行更新
 // 持久化存储：watch深度监视list的变化 -> 往本地存储 ->进入页面优先读取本地数据
-
-
 export default {
-  components: {
-    TodoHeader,
-    TodoMain,
-    TodoFooter
-  },
-  data () {
+  data() {
     return {
       list: JSON.parse(localStorage.getItem('list')) || [
         { id: 1, name: '打篮球' },
@@ -52,6 +42,11 @@ export default {
         { id: 3, name: '逛街' },
       ],
     }
+  },
+  components: {
+    TodoHeader,
+    TodoMain,
+    TodoFooter,
   },
   watch: {
     list: {
@@ -62,18 +57,18 @@ export default {
     },
   },
   methods: {
-    handleAdd (todoName) {
+    handleAdd(todoName) {
       // console.log(todoName)
       this.list.unshift({
         id: +new Date(),
         name: todoName,
       })
     },
-    handelDel (id) {
+    handelDel(id) {
       // console.log(id);
       this.list = this.list.filter((item) => item.id !== id)
     },
-    clear () {
+    clear() {
       this.list = []
     },
   },
