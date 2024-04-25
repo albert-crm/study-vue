@@ -1,13 +1,16 @@
 <template>
   <div class="app">
-    <BaseSelect v-model="selectId"></BaseSelect>
+    <BaseSelect
+      :selectId="selectId"
+      @changeCity="selectId = $event"
+    ></BaseSelect>
   </div>
 </template>
 
 <script>
 import BaseSelect from './components/BaseSelect.vue'
 export default {
-  data () {
+  data() {
     return {
       selectId: '102',
     }
